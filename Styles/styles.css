@@ -13,5 +13,151 @@ html {
 
 body {
   background: white;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  body main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body main .gradient {
+  position: relative;
+}
+
+body main .gradient .front-card {
+  background: url(../images/bg-card-front.png);
+  position: absolute;
+  height: 245px;
+  width: 447px;
+  left: 30%;
+  top: 15%;
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+  body main .gradient .front-card {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    height: 180px;
+    width: 310px;
+    border-radius: 0.5rem;
+    z-index: 1;
+  }
+}
+
+body main .gradient .front-card .info {
+  padding: 1.5rem;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  body main .gradient .front-card .info {
+    padding: 1rem;
+  }
+  body main .gradient .front-card .info img {
+    height: 1.8rem;
+  }
+}
+
+body main .gradient .front-card .info h3 {
+  letter-spacing: 0.2rem;
+  margin-top: 4rem;
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  body main .gradient .front-card .info h3 {
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+}
+
+body main .gradient .front-card .info .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1rem;
+}
+
+body main .gradient .front-card .info .name p {
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+}
+
+body main .gradient .back-card {
+  position: absolute;
+  background: url(../images/bg-card-back.png);
+  height: 245px;
+  width: 447px;
+  left: 54%;
+  top: 47%;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  body main .gradient .back-card {
+    position: absolute;
+    top: 8%;
+    left: 12.5%;
+    height: 180px;
+    width: 310px;
+    border-radius: 0.5rem;
+  }
+}
+
+body main .gradient .back-card .zero p {
+  margin-top: 6rem;
+  margin-left: 19.5rem;
+  color: white;
+  letter-spacing: 0.05rem;
+}
+
+@media only screen and (max-width: 600px) {
+  body main .gradient .back-card .zero p {
+    margin-top: 4.4rem;
+    margin-left: 14rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body main .gradient .bg-desktop {
+    display: none;
+  }
+}
+
+body main .gradient img {
+  max-width: 100%;
+}
+
+body main .gradient .bg-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body main .gradient .bg-mobile {
+    display: block;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

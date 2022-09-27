@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
-
-
 $Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
 $Red : hsl(0, 100%, 66%);
 
@@ -21,4 +19,112 @@ html{
 }
 body{
     background: $White;
+    min-height: 100vh;
+    overflow: hidden;
+    main{
+        display: flex;
+        @media only screen and (max-width: 600px){
+            flex-direction: column;
+        }
+        .text{
+        }
+        .gradient{
+            position: relative;
+            .front-card{
+                background: url(../images/bg-card-front.png);
+                position: absolute;
+                height: 245px;
+                width: 447px;
+                left: 30%;
+                top: 15%;
+                background-size: cover;
+                background-position: center;
+                @media only screen and (max-width: 600px) {
+                    position: absolute;
+                    top: 45%;
+                    left: 5%;
+                    height: 180px;
+                    width: 310px;
+                    border-radius: 0.5rem;
+                    z-index: 1;
+                }
+                .info{
+                    padding: 1.5rem;
+                    color: $White;
+                    @media only screen and (max-width: 600px){
+                        padding: 1rem;
+                        img{
+                            height: 1.8rem;
+                        }
+                    }
+                    h3{
+                        letter-spacing: 0.2rem;
+                        margin-top: 4rem;
+                        font-size: 1.3rem;
+                        @media only screen and (max-width: 600px) {
+                            font-size: 0.9rem;
+                            margin-top: 2rem;
+                        }
+                    }
+                    .name{
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        justify-content: space-between;
+                        margin-top: 1rem;
+                        p{
+                            font-size: 0.8rem;
+                            letter-spacing: 0.05rem;
+                        }
+                    }
+                }
+            }
+            .back-card{
+                position: absolute;
+                background: url(../images/bg-card-back.png);
+                height: 245px;
+                width: 447px;
+                left: 54%;
+                top: 47%;
+                background-size: cover;
+                // z-index: -1;
+                @media only screen and (max-width: 600px) {
+                    position: absolute;
+                        top: 8%;
+                        left: 12.5%;
+                        height: 180px;
+                        width: 310px;
+                        border-radius: 0.5rem;
+                }
+                .zero{
+                    p{
+                        margin-top: 6rem;
+                        margin-left: 19.5rem;
+                        color: $White;
+                        letter-spacing: 0.05rem;
+                        @media only screen and (max-width: 600px){
+                            margin-top: 4.4rem;
+                            margin-left: 14rem;
+                            font-size: 0.8rem;
+                        }
+                        
+                    }
+                }
+            }
+            .bg-desktop{
+                @media only screen and (max-width: 600px){
+                    display: none;
+                }
+            }
+            img{
+                max-width: 100%;
+            }
+            .bg-mobile{
+                display: none;
+                @media only screen and (max-width: 600px){
+                    display: block;
+                }
+            }
+        }
+    }
 }
